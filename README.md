@@ -20,4 +20,5 @@ Frames from videos pertaining to the study dataset. End-diastolic frames are sho
 #### Three examples of misclassified video of low quality:
 ![Figure12](https://github.com/pulseheart/PulseHeart-AutoML/assets/29145045/c6f885ca-76c8-4dd9-a148-dcb652f898e4)
 Frames from misclassified videos. End-diastolic frames are shown on the upper part of the slide and end-systolic frames below: (a) 0X41ECEC7AAEEFD0E6.avi, label pEF, EF 57.3% by Simpson method, pEF by unanimous panel, misclassified as rEF; (b) 0X7923B6B4614AF456.avi, label mEF, EF 49.1% by Simpson method, mEF for four raters and rEF for one rater,  misclassified as rEF; (c) 0X3503A92D7637451.avi, label rEF, EF 31.8% by Simpson method, rEF by unanimous panel, misclassified as nrEF. 
-### Re
+### Using the original train/split of our nine experimentations:
+Use the corresponding 
