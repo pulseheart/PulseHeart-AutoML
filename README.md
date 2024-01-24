@@ -44,8 +44,11 @@ At step 3:
 - Indicate your video file path, for instance: gs://myfolder/curated
 - Choose Data split "Manual"
 - Click Continue
-- 
+  
 ### Training an AutoML video classification model
-
-
-
+- Review the experiment videos
+- Click TRAIN NEW MODEL
+- Choose a training method (AutoML in this example)
+- Click "Define your model" 
+- Edit model Name if necessary (for exmaple: ternary_classification_large_set)
+- Click "START TRAINING"
