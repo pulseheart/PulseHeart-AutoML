@@ -7,7 +7,7 @@ video classification for reduced, mid-range and preserved ejection fraction by e
 ### General Flow Chart
 ![Figure1](https://github.com/pulseheart/PulseHeart-AutoML/assets/29145045/f8b47c24-d385-455a-ab9b-cf8ac43778b2)
 (a) data curation; (b) upload the study managed dataset to Google Cloud Storage; (c) balanced data sets S, M and L, the size of which depends on the minority class (rEF, mEF and npEF respectively); (d): video classifications to test; (e): create a per-model annotation dataset and upload the corresponding CSV files (one for the train and one for the test videos); (f) specify the model to be trained; (g) run the model for training; (h) analyze the test set; (i) human panel reassessment of false positives and false negatives.
-#### Get access to the EcoNet dataset
+#### Get access to the EchoNet dataset
 Open the GitHub link https://echonet.github.io/dynamic/ and there open the link to access the dataset: https://stanfordaimi.azurewebsites.net/datasets/834e1cd1-92f7-4268-9daa-d359198b310af, log in or sign up if you don't have an acccount.
 Download the 7.04 GB EchoNet-Dynamic.zip file.
 Unzip the file 
@@ -25,9 +25,9 @@ Use the corresponding CSV files in this subdirectory https://github.com/pulsehea
 These files include the video file path to be changed to your's for instance by a Replace_All operation in Excel.
 ## Launch experimentations, either replicating those of this research or training your own
 
-Create a storage bucket, nae it for instance myfolder an upload there the /curated folder of study video files 
+Create a storage bucket, name it for instance myfolder and upload there the /curated folder of study video files 
 
-Refer to the following documentation : https://cloud.google.com/vertex-ai/docs/tutorials/video-classification-automl/training. Follow the instructions on the following five pages:
+Refer to the following documentation : https://cloud.google.com/vertex-ai/docs/tutorials/video-classification-automl/training:
 
 ### Setting up your project
 Chose an appropriate name, like "echocg video classification"
@@ -49,6 +49,7 @@ At step 3:
 - Review the experiment videos
 - Click TRAIN NEW MODEL
 - Choose a training method (AutoML in this example)
-- Click "Define your model" 
-- Edit model Name if necessary (for exmaple: ternary_classification_large_set)
+- Click "Define your model"
+- Make sure that data split is manual 75/25
+- Edit Model Name if necessary (for example: ternary_classification_large_set)
 - Click "START TRAINING"
