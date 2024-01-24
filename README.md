@@ -7,7 +7,7 @@ video classification for reduced, mid-range and preserved ejection fraction by e
 ### General Flow Chart
 ![Figure1](https://github.com/pulseheart/PulseHeart-AutoML/assets/29145045/f8b47c24-d385-455a-ab9b-cf8ac43778b2)
 (a) data curation; (b) upload the study managed dataset to Google Cloud Storage; (c) balanced data sets S, M and L, the size of which depends on the minority class (rEF, mEF and npEF respectively); (d): video classifications to test; (e): create a per-model annotation dataset and upload the corresponding CSV files (one for the train and one for the test videos); (f) specify the model to be trained; (g) run the model for training; (h) analyze the test set; (i) human panel reassessment of false positives and false negatives.
-#### Get access to the EchoNet dataset
+### Get access to the EchoNet dataset
 - Open the GitHub link https://echonet.github.io/dynamic/ and there open the link to access the dataset: https://stanfordaimi.azurewebsites.net/datasets/834e1cd1-92f7-4268-9daa-d359198b310af, log in or sign up if you don't have an acccount.
 - Download the 7.04 GB EchoNet-Dynamic.zip file.
 - Unzip the file 
@@ -21,21 +21,21 @@ Frames from videos pertaining to the study dataset. End-diastolic frames are sho
 #### Three examples of misclassified video of low quality
 ![Figure12](https://github.com/pulseheart/PulseHeart-AutoML/assets/29145045/c6f885ca-76c8-4dd9-a148-dcb652f898e4)
 Frames from misclassified videos. End-diastolic frames are shown on the upper part of the slide and end-systolic frames below: (a) 0X41ECEC7AAEEFD0E6.avi, label pEF, EF 57.3% by Simpson method, pEF by unanimous panel, misclassified as rEF; (b) 0X7923B6B4614AF456.avi, label mEF, EF 49.1% by Simpson method, mEF for four raters and rEF for one rater,  misclassified as rEF; (c) 0X3503A92D7637451.avi, label rEF, EF 31.8% by Simpson method, rEF by unanimous panel, misclassified as nrEF. 
-## Use the original train/split of our nine experimentations
+### Use the original train/split of our nine experimentations
 Use the corresponding CSV files in the folder annotation datasets.
 
 These files include the video file path to be changed to your's, for instance by a Replace_All operation in Excel.
 
-## Launch experimentations, either replicating those of this research or training your own
+### Launch experimentations, either replicating those of this research or training your own
 
 Create a storage bucket, name it for instance myvideofolder and upload there the /curated folder of study video files 
 
 Refer to the following documentation : https://cloud.google.com/vertex-ai/docs/tutorials/video-classification-automl/training:
 
-### Setting up your project
+#### Setting up your project
 Chose an appropriate name, like "echocg-video-classification"
 
-### Creating a video classification dataset and importing videos
+#### Creating a video classification dataset and importing videos
 
 At the step 2a: choose the name your Dataset in relation with the annotation dataset that you will use: for example L-3-classes 
 
@@ -45,10 +45,10 @@ At step 3:
 - Upload the training csv file (example: training_L_3_classes) specifying "training"
 - Clicking ADD ANOTHER FILE
 - Upload the testing csv file (example: test_L_3_classes) specifying "testing"
-- Indicate your video file path, for instance: gs://myfolder/curated
+- Indicate your video file path, for instance: gs://myvideofolder/curated
 - Click Continue
   
-### Training a video classification model
+#### Training a video classification model
 - Review the experiment videos
 - Click TRAIN NEW MODEL
 - Choose a training method (AutoML in this example)
