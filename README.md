@@ -24,7 +24,7 @@ Frames from misclassified videos. End-diastolic frames are shown on the upper pa
 Use the corresponding CSV files in this subdirectory https://github.com/pulseheart/PulseHeart-AutoML/tree/main/annotation%20datasets.
 These files include the video file path to be changed to your's for instance by a Replace_All operation in Excel.
 ## Launch experimentations, either replicating those of this research or training your own
-Create a storage bucket an upload the /curated folder of study video files 
+Create a storage bucket, nae it for instance myfolder an upload there the /curated folder of study video files 
 
 Refer to the following documentation : https://cloud.google.com/vertex-ai/docs/tutorials/video-classification-automl/training. Follow the instructions on the following five pages:
 
@@ -32,8 +32,18 @@ Refer to the following documentation : https://cloud.google.com/vertex-ai/docs/t
 Chose an appropriate name, like "echocg video classification"
 
 ### Creating a video classification dataset and importing videos
-At the step 2a: choose the name your Dataset in relation with the the annotation dataset that you will use: for example  
-Training an AutoML video classification model
+
+At the step 2a: choose the name your Dataset in relation with the the annotation dataset that you will use: for example L_3_classes 
+
+At step 3: 
+- Select "Upload import files from your computer"
+- Upload the training csv file (example: training_L_3_classes) specifying if as training
+- Clicking ADD ANOTHER FILE
+-  Upload the testing csv file (example: test_L_3_classes) specifying if as testing
+- Specify your video file path, for instance: gs://myfolder/curated
+- Choose Data split: Manual
+- Click Continue
+## Training an AutoML video classification model
 
 
 Create a storage bucket 
