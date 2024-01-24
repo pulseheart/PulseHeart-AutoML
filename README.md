@@ -11,7 +11,7 @@ video classification for reduced, mid-range and preserved ejection fraction by e
 Open the GitHub link https://echonet.github.io/dynamic/ and there open the link to access the dataset: https://stanfordaimi.azurewebsites.net/datasets/834e1cd1-92f7-4268-9daa-d359198b310af, log in or sign up if you don't have an acccount.
 Download the 7.04 GB EchoNet-Dynamic.zip file.
 Unzip the file 
-Extract the 3064 AVI files of our study dataset using the notebook ...
+Extract the 3064 AVI files of our study dataset in the subdirectory /curated using the notebook ...
 ### Watch individual videos
 Refer to the newly created CSV file for searching the desired videos.
 #### Three examples of correctly classified video of high quality:
@@ -20,13 +20,24 @@ Frames from videos pertaining to the study dataset. End-diastolic frames are sho
 #### Three examples of misclassified video of low quality
 ![Figure12](https://github.com/pulseheart/PulseHeart-AutoML/assets/29145045/c6f885ca-76c8-4dd9-a148-dcb652f898e4)
 Frames from misclassified videos. End-diastolic frames are shown on the upper part of the slide and end-systolic frames below: (a) 0X41ECEC7AAEEFD0E6.avi, label pEF, EF 57.3% by Simpson method, pEF by unanimous panel, misclassified as rEF; (b) 0X7923B6B4614AF456.avi, label mEF, EF 49.1% by Simpson method, mEF for four raters and rEF for one rater,  misclassified as rEF; (c) 0X3503A92D7637451.avi, label rEF, EF 31.8% by Simpson method, rEF by unanimous panel, misclassified as nrEF. 
-### Use the original train/split of our nine experimentations
+## Use the original train/split of our nine experimentations
 Use the corresponding CSV files in this subdirectory https://github.com/pulseheart/PulseHeart-AutoML/tree/main/annotation%20datasets.
 These files include the video file path to be changed to your's for instance by a Replace_All operation in Excel.
-### Launch experimentations, either replicating those of this research or training your own
-#### Using the Google Cloud:
+## Launch experimentations, either replicating those of this research or training your own
+Create a storage bucket an upload the /curated folder of study video files 
+
+Refer to the following documentation : https://cloud.google.com/vertex-ai/docs/tutorials/video-classification-automl/training. Follow the instructions on the following five pages:
+
+### Setting up your project
+Chose an appropriate name, like "echocg video classification"
+
+### Creating a video classification dataset and importing videos
+At the step 2a: choose the name your Dataset in relation with the balancing 
+Training an AutoML video classification model
+
+
 Create a storage bucket 
-Upload the study video files in a folder
+Upload /curated folder of study video files
 Create a new project
 Create the managed dataset
 In the Vertex AI dashboard select Model Registry - Training - Train new model
