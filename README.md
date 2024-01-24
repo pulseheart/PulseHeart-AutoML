@@ -48,7 +48,7 @@ At step 3:
 - Indicate your video file path, for instance: gs://myfolder/curated
 - Click Continue
   
-### Training an AutoML video classification model
+### Training a video classification model
 - Review the experiment videos
 - Click TRAIN NEW MODEL
 - Choose a training method (AutoML in this example)
