@@ -32,7 +32,7 @@ Refer to the following documentation : https://cloud.google.com/vertex-ai/docs/t
 Chose an appropriate name, like "echocg video classification"
 
 ### Creating a video classification dataset and importing videos
-At the step 2a: choose the name your Dataset in relation with the balancing 
+At the step 2a: choose the name your Dataset in relation with the the annotation dataset that you will use: for example  
 Training an AutoML video classification model
 
 
