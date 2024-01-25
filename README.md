@@ -16,7 +16,7 @@ video classification for reduced, mid-range and preserved ejection fraction by e
 - Create a folder "curated" 
 - Extract the 3064 AVI files of our study dataset in "curated" using the notebook transfer-from-source.ipynb
 ### Watch individual videos
-
+The all-data.cvs descibes the 3064 videos used  in this study.
 #### Three examples of correctly classified video of high quality:
 ![Figure2](https://github.com/pulseheart/PulseHeart-AutoML/assets/29145045/90c1dce5-f40a-4d32-a7f1-1535c24b7cf0)
 Frames from videos pertaining to the study dataset. End-diastolic frames are shown on the upper part of the slide and end-systolic frames below: (a) 0X2753C50A8B05D7D5.avi, label pEF, EF 58.3% by Simpson method; (b) 0X2F3141F00A232601.avi, label mEF, EF 42.1% by Simpson method; (c) 0X41563E2CC2230C0E.avi, label rEF, EF 21.9% by Simpson method.
