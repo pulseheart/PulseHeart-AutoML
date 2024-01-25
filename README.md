@@ -32,7 +32,7 @@ These files include our bucket name in the video file paths to be changed to you
 
 Create a storage bucket and upload there the "curated" folder of study video files 
 
-Refer to the following section of this [tutorial](https://cloud.google.com/vertex-ai/docs/tutorials/video-classification-automl/training).
+Refer to the following section of this [tutorial](https://cloud.google.com/vertex-ai/docs/tutorials/video-classification-automl).
 
 #### Setting up your project
 Chose an appropriate name, like "echocg-video-classification"
