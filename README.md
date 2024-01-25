@@ -10,13 +10,13 @@ video classification for reduced, mid-range and preserved ejection fraction by e
 ### Get access to the EchoNet dataset
 - Make a fork of the GitHub directory
 - Download locally the forked directory
-- Open the GitHub link https://echonet.github.io/dynamic/ and there open the link to access the dataset: https://stanfordaimi.azurewebsites.net/datasets/834e1cd1-92f7-4268-9daa-d359198b310af, log in or sign up if you don't have an acccount.
+- Open the GitHub link [echonet-dynamic](https://echonet.github.io/dynamic/) and there open the link to access the dataset at [Standford AIMI](https://stanfordaimi.azurewebsites.net/datasets/834e1cd1-92f7-4268-9daa-d359198b310af) (log in or sign up if you don't have an acccount).
 - Download the 7.04 GB EchoNet-Dynamic.zip file.
 - Unzip the file in your local directory
 - Create a folder "curated" 
-- Extract the 3064 AVI files of our study dataset in "curated" using the notebook transfer-from-source.ipynb
+- Extract the 3064 AVI files of our study dataset in "curated" using the notebook [transfer-from-source.ipynb](https://github.com/pulseheart/PulseHeart-AutoML/blob/main/transfer-from-source.ipynb)
 ### Watch individual videos
-The all-data.cvs descibes the 3064 videos used  in this study.
+The [all-data cvs file](https://github.com/pulseheart/PulseHeart-AutoML/blob/main/all-data.csv) describes the 3064 videos used  in this study.
 #### Three examples of correctly classified video of high quality:
 ![Figure2](https://github.com/pulseheart/PulseHeart-AutoML/assets/29145045/90c1dce5-f40a-4d32-a7f1-1535c24b7cf0)
 Frames from videos pertaining to the study dataset. End-diastolic frames are shown on the upper part of the slide and end-systolic frames below: (a) 0X2753C50A8B05D7D5.avi, label pEF, EF 58.3% by Simpson method; (b) 0X2F3141F00A232601.avi, label mEF, EF 42.1% by Simpson method; (c) 0X41563E2CC2230C0E.avi, label rEF, EF 21.9% by Simpson method.
@@ -32,7 +32,7 @@ These files include our bucket name in the video file paths to be changed to you
 
 Create a storage bucket and upload there the "curated" folder of study video files 
 
-Refer to the following section of the tutorial : https://cloud.google.com/vertex-ai/docs/tutorials/video-classification-automl/training:
+Refer to the following section of this [tutorial](https://cloud.google.com/vertex-ai/docs/tutorials/video-classification-automl/training).
 
 #### Setting up your project
 Chose an appropriate name, like "echocg-video-classification"
