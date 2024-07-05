@@ -1,9 +1,8 @@
 # PulseHeart-AutoML
-video classification for reduced, mid-range and preserved ejection fraction by echocardiography
 
 ## Article
 
-![image](https://github.com/pulseheart/PulseHeart-AutoML/assets/29145045/1c3ea783-6f05-4325-aa84-d3790b2496d0)
+![image](https://github.com/pulseheart/PulseHeart-PyTorch/assets/29145045/781bfb36-e2f5-46c6-9ded-9b776e0ca508)
 
 https://www.mdpi.com/2075-4418/14/13/1439
 
